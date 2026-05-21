@@ -1,22 +1,32 @@
-# Manually maintained formula for dakera-mcp server.
-# cargo-dist does NOT manage this formula (dakera-mcp uses Docker for releases).
-# Update URLs and SHA256 checksums manually after each server release.
-# Phase: 3b (see DAK-5410 for npx wrapper implementation)
+# Auto-updated by .github/workflows/update-homebrew-formula.yml in dakera-mcp repo.
+# SHA256 checksums are regenerated on each release — do not edit manually.
 
 class DakeraMcp < Formula
-  desc "Dakera AI Memory MCP server — plug into any MCP-compatible AI client"
+  desc "Dakera MCP Server — Model Context Protocol server for AI agent memory"
   homepage "https://dakera.ai"
-  version "0.11.54"
-  # TODO(DAK-5410): add binary URLs once cross-compilation is complete (DAK-5409)
-  # For now, installation requires Docker: docker run -p 3300:3300 ghcr.io/dakera-ai/dakera:latest
-  depends_on "docker" => :optional
+  version "0.10.4"
+  license "MIT"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-aarch64-apple-darwin.tar.gz"
+      sha256 "PLACEHOLDER_aarch64_apple_darwin"
+    else
+      url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-x86_64-apple-darwin.tar.gz"
+      sha256 "PLACEHOLDER_x86_64_apple_darwin"
+    end
+  end
+
+  on_linux do
+    url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "PLACEHOLDER_x86_64_unknown_linux_gnu"
+  end
 
   def install
-    # Placeholder until DAK-5409 (cross-compile) is complete
-    odie "dakera-mcp binary distribution not yet available. Use Docker or npx @dakera-ai/dakera-mcp (coming DAK-5410)."
+    bin.install "dakera-mcp"
   end
 
   test do
-    true
+    system "#{bin}/dakera-mcp", "--version"
   end
 end
