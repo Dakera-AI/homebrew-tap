@@ -5,16 +5,16 @@ class Dk < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.7.0/dakera-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b9808304bee99670923d893daa5868a34e58145428bebe8f0ea77b6198d0f272"
+      sha256 "760caec917f4d4b2e979cf737c2056999c9b05b33142c9a6c698fdd4106fc14a"
     end
     if Hardware::CPU.intel?
       url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.7.0/dakera-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "088f1339e165603711e75caee5c32da8b587777b69dec07ed1e22ee64a5398cd"
+      sha256 "bf592432637e51a56d52c57ea37b20c05ec32504b0580b92cf79b8ea91eb90d1"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.7.0/dakera-cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "aae934e50704dd935496a7ee7c2e3d689d4ef8b42166343605e9a2e982a95d1b"
+    sha256 "ad91e89b14883828992c04fbea9f478113c518b6dec048c6d7cfe14d7abb0776"
   end
   license "MIT"
 
