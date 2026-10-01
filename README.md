@@ -22,9 +22,9 @@ Formulae are not edited by hand: a release of the tool regenerates its formula (
 | Tool | Version in this tap | Dakera server |
 |------|---------------------|---------------|
 | `dk` | 0.8.0 | v0.12.0 and v0.11.108; the v0.12 commands (`dk capabilities`, `dk attachment`, `--lang`, ...) need v0.12.0, see the [dk 0.8.0 release](https://github.com/dakera-ai/dakera-cli/releases/tag/v0.8.0). 0.7.x works with v0.11.108 |
-| `dakera-mcp` | see `Formula/dakera-mcp.rb` | Support for v0.12.0 arrives with dakera-mcp 0.11.0 ([dakera-mcp#155](https://github.com/dakera-ai/dakera-mcp/pull/155)); works with v0.11.108 and v0.12.0 |
+| `dakera-mcp` | 0.11.0 | v0.12.0 and v0.11.108; the v0.12 tools (capabilities, attachments, `lang`, ...) need v0.12.0 and are hidden on older servers, see the [dakera-mcp 0.11.0 release](https://github.com/dakera-ai/dakera-mcp/releases/tag/v0.11.0) |
 
-Run `brew upgrade dk dakera-mcp` after those releases are published.
+Run `brew upgrade dk dakera-mcp` to get them.
 
 ## Platforms
 
