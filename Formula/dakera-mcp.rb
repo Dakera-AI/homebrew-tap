@@ -1,22 +1,22 @@
 class DakeraMcp < Formula
   desc "Dakera MCP Server - Model Context Protocol server for AI agent memory"
   homepage "https://dakera.ai"
-  version "0.10.12"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-aarch64-apple-darwin.tar.gz"
-      sha256 "2b9c54a68fe87282b320717e0d785f931fdd7bf037bfff463e087120dd198720"
+      sha256 "4207d25153084653100bd23a7b629329a5a1ab4baf4c036ccb1abca76a93b509"
     else
       url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-x86_64-apple-darwin.tar.gz"
-      sha256 "efd4cb79b98637595c0f92ae7e3d2770d95730239ad76cdf9717b45c2de462db"
+      sha256 "cd03cb55262d4cbc73e39c09b04805a087d14e63b103336918e0a2e087db101f"
     end
   end
 
   on_linux do
     url "https://github.com/dakera-ai/dakera-mcp/releases/download/v#{version}/dakera-mcp-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "cd9fc91852c8a588fda8aa9ebd18425dcc59648e8cfe0f8e5599c927c0abfb37"
+    sha256 "f312b9c48f2f643242b3020ccfa73b6feb8a3c5e7872d29a38c32a1777c845ea"
   end
 
   def install
