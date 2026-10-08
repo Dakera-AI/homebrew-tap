@@ -1,20 +1,20 @@
 class Dk < Formula
   desc "Command-line interface for Dakera AI Agent Memory Platform"
   homepage "https://dakera.ai"
-  version "0.8.0"
+  version "0.8.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.0/dakera-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "0c19c3590be7d2751b78fde7eefa9107d19b939003a73539e16664dd146357f2"
+      url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.1/dakera-cli-aarch64-apple-darwin.tar.gz"
+      sha256 "d38eb3b20c4c969f6f1158dbdb8b00b27256ad59c9cafd4220a0ea84e7611e99"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.0/dakera-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "4db718b07053bf4ca7ae6c7709971725bc72aa5655bc5f4b05289a1229f73fed"
+      url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.1/dakera-cli-x86_64-apple-darwin.tar.gz"
+      sha256 "ad0434be5fa05906fb081ee95df98f4d2a8ac1652cc8ba5bc39e91bd5d16fb96"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.0/dakera-cli-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "a53eca65816cc105b5771d6bcd9696b99456c785eb19cc8c017516cab703d3d0"
+    url "https://github.com/dakera-ai/dakera-cli/releases/download/v0.8.1/dakera-cli-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "4f348c8da7c8d9bdef8a19d53bab51274c368fcbb4b5f6640f79f03c430b96f1"
   end
   license "MIT"
 
